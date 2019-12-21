@@ -3,21 +3,27 @@ class Ship {
         this.name=name;
         this.latitude=latitude;
         this.longtude=longtude;
-        this.status=false
     }
     start(){
+        this.status=true;
         console.log(" Корабль поплыл ")
     }
-    move(){
-        console.log( " Корабль " + this.name + " Он находится на широте "+ this.latitude + " и на долготе " + this.longtude); 
+    move(latitude, longtude){
+        this.latitude=latitude;
+        this.longtude=longtude;
+        console.log( " Корабль " + this.name + " Он находится на широте "+ this.latitude + " и на долготе " + this.longtude + " Корабль " + this.name + " Он находится на широте "+ this.latitude + " и на долготе " + this.longtude);
     }
     stop(){
+        this.status=false;
         console.log(" Корабль остановился ")
-        }
+    }
+    isInTheWay(){
+        return status
+    }
 }
-var ship=new Ship("Nol", "23°27′30″", "25°25′42″", "25°23′31″", "27°25′46″");
+var ship=new Ship("Nol", 35, 25);
 ship.start();
-ship.move();
+ship.move(27, 34);
 ship.stop();
 
 
